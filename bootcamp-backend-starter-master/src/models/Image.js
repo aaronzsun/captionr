@@ -1,8 +1,8 @@
 const BaseModel = require('./BaseModel')
 
-class User extends BaseModel {
+class Image extends BaseModel {
   static get tableName() {
-    return 'users'
+    return 'images'
   }
 
   static get relationMappings() {
@@ -13,4 +13,4 @@ class User extends BaseModel {
   }
 }
 
-module.exports = User
+module.exports = Image
