@@ -1,8 +1,8 @@
 const merge = require('lodash.merge')
 const Users = require('./User')
 const Images = require('./Image')
-const captions = require('./Caption')
+const Captions = require('./Caption')
 
-const resolvers = [Users]
+const resolvers = [Users, Images, Captions]
 
 module.exports = merge(...resolvers)
