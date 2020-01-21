@@ -1,4 +1,4 @@
-const captionData = require('../../../data/caption')
+const captionData = require('../../../data/captions')
 
 
 exports.seed = knex => knex('captions').del()

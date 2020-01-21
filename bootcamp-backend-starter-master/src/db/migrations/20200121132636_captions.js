@@ -9,7 +9,7 @@ exports.up = async knex => createTableIfNotExists(knex, 'captions', table => {
 
     table
         .uuid('user_id')
-        .references('user.id')
+        .references('users.id')
         .notNullable()
 
     table

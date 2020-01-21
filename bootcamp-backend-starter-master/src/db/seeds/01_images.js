@@ -1,4 +1,4 @@
-const imageData = require('../../../data/image')
+const imageData = require('../../../data/images')
 
 
 exports.seed = knex => knex('images').del()

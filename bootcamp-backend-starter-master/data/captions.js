@@ -1,6 +1,6 @@
 const casual = require('casual')
-const userData = require('./user')
-const imageData = require('./image')
+const userData = require('./users')
+const imageData = require('./images')
 
 // 'password' hashed with bcrypt scheme
 
@@ -8,10 +8,10 @@ casual.define('caption', ({user_id, image_id}) => ({
   id: casual.uuid,
   user_id,
   image_id,
-  caption: casual.text,
-  upvotes: 0,
-  created_at: casual.moment,
-  updated_at: casual.moment,
+  caption: casual.sentence,
+  upvotes: casual.integer(1, 20),
+  createdAt: casual.moment,
+  updatedAt: casual.moment,
 }))
 
 
