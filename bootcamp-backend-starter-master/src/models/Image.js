@@ -7,17 +7,15 @@ class Image extends BaseModel {
   }
 
   static get relationMappings() {
-    // import relevant tables with const User = require('./User')
     const Caption = require('./Caption')
     return {
       captions: {
         relation: HasManyRelation,
         modelClass: Caption,
         join: {
-          from: images.id,
-          to: captions.id,
-        },
-
+          from: 'images.id',
+          to: 'captions.image_id',
+        }
       }
     }
   }

@@ -4,6 +4,7 @@ module.exports = gql`
   type Query {
     users: [User!]!
     images: [Image!]!
+
   }
 
   type Mutation {
@@ -14,8 +15,8 @@ module.exports = gql`
 
   type Caption {
     id: ID!
-    user_id: ID!
-	  image_id: ID!
+    image: Image!
+    user: User!
 	  caption: String!
 	  upvotes: int!
   }
@@ -33,7 +34,7 @@ module.exports = gql`
   }
   type Image {
     id: ID!
-    caption: Caption!
+    captions: [Image]!
     url: String!
   }
 `
