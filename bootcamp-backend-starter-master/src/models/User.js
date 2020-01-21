@@ -6,9 +6,17 @@ class User extends BaseModel {
   }
 
   static get relationMappings() {
-    // import relevant tables with const User = require('./User')
+    const Caption = require('./Caption')
     return {
         //TODO CREATE RELATION
+        captions: {
+          realtion: HasManyRelation,
+          modelClass: Caption,
+          join: {
+            from: 'users.id',
+            to: 'captions.user_id'
+          }
+        }
     }
   }
 }
