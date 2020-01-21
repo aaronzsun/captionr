@@ -8,7 +8,6 @@ class User extends BaseModel {
   static get relationMappings() {
     const Caption = require('./Caption')
     return {
-      //TODO CREATE RELATION
       captions: {
         relation: HasManyRelation,
         modelClass: Caption,

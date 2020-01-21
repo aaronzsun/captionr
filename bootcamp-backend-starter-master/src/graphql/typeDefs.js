@@ -4,7 +4,8 @@ module.exports = gql`
   type Query {
     users: [User!]!
     images: [Image!]!
-
+    victories(user_id: ID!, image_id: ID!): [Caption]!
+    imageCaptions(img_id: ID!): [Caption]!
   }
 
   type Mutation {
