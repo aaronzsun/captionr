@@ -5,7 +5,13 @@ const AllImages = async () => {
     const i = await Image.query()
     return i
 }
-const ImageCaptions = async ({ image_id }) => {
+
+const imageCaptions = async (img_id) => {
+  const x = await Image.query().findById(img_id)
+  return x
+}
+
+const caption = async ({ image_id }) => {
   const c = await Caption.query().findById(image_id)
   return c
 }
@@ -13,9 +19,10 @@ const ImageCaptions = async ({ image_id }) => {
 const resolver = {
   Query: {
     images: AllImages,
+    imageCaptions,
   },
   Image: {
-    caption: ImageCaptions
+    caption,
   }
 }
 
