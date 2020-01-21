@@ -1,3 +1,4 @@
+const { HasManyRelation } = require('objection')
 const BaseModel = require('./BaseModel')
 
 class Image extends BaseModel {
@@ -7,8 +8,17 @@ class Image extends BaseModel {
 
   static get relationMappings() {
     // import relevant tables with const User = require('./User')
+    const Caption = require('./Caption')
     return {
-        //TODO CREATE RELATION
+      captions: {
+        relation: HasManyRelation,
+        modelClass: Caption,
+        join: {
+          from: images.id,
+          to: captions.id,
+        },
+
+      }
     }
   }
 }
