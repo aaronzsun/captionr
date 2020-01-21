@@ -3,8 +3,8 @@ const casual = require('casual')
 casual.define('image', () => ({
   id: casual.uuid,
   url: casual.url,
-  created_at: casual.moment,
-  updated_at: casual.moment,
+  createdAt: casual.moment,
+  updatedAt: casual.moment,
 }))
 
 
