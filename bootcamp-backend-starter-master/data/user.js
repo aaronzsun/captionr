@@ -5,7 +5,7 @@ const password = '$2a$10$rQEY9CNl4OC.UtiyRgKnZeW0KaWnEANMKAxfIpNDQCgiCybm3G1fy'
 
 casual.define('user', () => ({
   id: casual.uuid,
-  email: casual.email,
+  username: casual.name,
   password,
   created_at: casual.moment,
   updated_at: casual.moment,
