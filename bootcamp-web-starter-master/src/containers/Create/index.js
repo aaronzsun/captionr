@@ -2,10 +2,11 @@ import React from 'react'
 import FadeIn from 'react-fade-in'
 import { Title } from './styles'
 
-const Home = () => (
+const Create = () => (
   <FadeIn>
-    <Title> FEED </Title>
+    <Title> CREATE </Title>
   </FadeIn>
+
 )
 
-export default Home
+export default Create

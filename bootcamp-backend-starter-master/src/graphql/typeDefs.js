@@ -46,5 +46,4 @@ module.exports = gql`
     image_id: ID!
     user_id: ID!
   }
-
 `
