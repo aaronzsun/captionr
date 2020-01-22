@@ -19,7 +19,7 @@ module.exports = gql`
     image: Image!
     user: User!
 	  caption: String!
-	  upvotes: int!
+	  upvotes: Int!
   }
 
   type User {
@@ -35,7 +35,7 @@ module.exports = gql`
   }
   type Image {
     id: ID!
-    captions: [Image]!
+    captions: [Caption]!
     url: String!
   }
 `

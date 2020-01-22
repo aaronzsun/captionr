@@ -6,12 +6,12 @@ const AllImages = async () => {
     return i
 }
 
-const imageCaptions = async (img_id) => {
-  const x = await Image.query().findById(img_id)
+const imageCaptions = async ({ img_id }) => {
+  const x = await Caption.query().where('image_id', img_id)
   return x
 }
 
-const caption = async ({ image_id }) => {
+const captions = async ({ image_id }) => {
   const c = await Caption.query().findById(image_id)
   return c
 }
@@ -22,7 +22,11 @@ const resolver = {
     imageCaptions,
   },
   Image: {
-    caption,
+    captions,
+  },
+  Caption: {
+    image,
+    user,
   }
 }
 

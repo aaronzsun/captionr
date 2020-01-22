@@ -2,7 +2,7 @@ const BaseModel = require('./BaseModel')
 
 class Caption extends BaseModel {
     static get tableName() {
-        return 'caption'
+        return 'captions'
     }
 
     static get relationMappings() {
