@@ -1,3 +1,5 @@
+const { HasManyRelation } = require('objection')
+
 const BaseModel = require('./BaseModel')
 
 class User extends BaseModel {
