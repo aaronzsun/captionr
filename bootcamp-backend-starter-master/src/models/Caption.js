@@ -1,3 +1,5 @@
+const { BelongsToOneRelation } = require('objection')
+
 const BaseModel = require('./BaseModel')
 
 class Caption extends BaseModel {

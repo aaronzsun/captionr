@@ -1,4 +1,5 @@
 const Image = require('../../models/Image.js')
+const User = require('../../models/User.js')
 const Caption = require('../../models/Caption.js')
 
 const AllImages = async () => {
@@ -6,7 +7,7 @@ const AllImages = async () => {
     return i
 }
 
-const imageCaptions = async ({ img_id }) => {
+const imageCaptions = async (obj, { img_id }) => {
   const x = await Caption.query().where('image_id', img_id)
   return x
 }
@@ -16,6 +17,14 @@ const captions = async ({ image_id }) => {
   return c
 }
 
+const image = async ({ image_id }) => {
+  const a = await Image.query().findById(image_id)
+  return a
+}
+const user = async ({ image_id }) => {
+  const b = await User.query().findById(image_id)
+  return b
+}
 const resolver = {
   Query: {
     images: AllImages,
@@ -27,7 +36,7 @@ const resolver = {
   Caption: {
     image,
     user,
-  }
+  },
 }
 
 module.exports = resolver
