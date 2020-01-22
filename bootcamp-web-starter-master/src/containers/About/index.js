@@ -4,6 +4,7 @@ import {
   Container, LeftBox, RightBox, Header, Text, Pic1, Pic2, RegisterButton, NavLink,
 } from './styles'
 
+
 const About = () => (
   <FadeIn>
     <Container>
