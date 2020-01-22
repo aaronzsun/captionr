@@ -7,7 +7,7 @@ const submit = async (obj, { input }) => {
 
 const vote = async (obj, {caption_id}) => {
   const addVote = await Caption.query().findById(caption_id).increment('upvotes', 1)
-
+  console.log(addVote)
   return addVote
 }
 const resolver = {
