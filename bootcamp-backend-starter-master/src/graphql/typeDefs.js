@@ -12,7 +12,8 @@ module.exports = gql`
     login(email: String!, password: String!): AuthReturn!
     register(email: String!, password: String!): AuthReturn!
     submit(input: CaptionInput! ): Caption!
-    vote(caption_id: ID!): Caption!
+    vote(caption_id: ID!): Int!
+    fetchImages(query: String!): String!
   }
 
   type Caption {
