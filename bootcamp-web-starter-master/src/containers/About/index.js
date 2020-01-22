@@ -3,7 +3,10 @@ import FadeIn from 'react-fade-in'
 import {
   Container, LeftBox, RightBox, Header, Text, Pic1, Pic2, RegisterButton, NavLink,
 } from './styles'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3a0c7c9ac1c28b0f310528dd558b6251352944c5
 
 const About = () => (
   <FadeIn>
