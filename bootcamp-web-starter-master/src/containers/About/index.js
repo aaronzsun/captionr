@@ -3,10 +3,6 @@ import FadeIn from 'react-fade-in'
 import {
   Container, LeftBox, RightBox, Header, Text, Pic1, Pic2, RegisterButton, NavLink,
 } from './styles'
-<<<<<<< Updated upstream
-import Login from '../Login'
-=======
->>>>>>> Stashed changes
 
 const About = () => (
   <FadeIn>
