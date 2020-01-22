@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const config = require('../config')
 
@@ -34,12 +34,14 @@ const decodeToken = token => {
  * @returns {Promise.<string>}
  */
 const hashPassword = password => new Promise((resolve, reject) => {
-  bcrypt.hash(password, 10, (err, hash) => {
-    if (err) {
-      reject(err)
-    } else {
-      resolve(hash)
-    }
+  bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.hash(password, salt, function(err, hash) {
+      if (err) {
+        reject(err)
+      } else {
+        resolve(hash)
+      }
+    })
   })
 })
 
