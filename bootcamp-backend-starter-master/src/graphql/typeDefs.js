@@ -11,7 +11,8 @@ module.exports = gql`
   type Mutation {
     login(email: String!, password: String!): AuthReturn!
     register(email: String!, password: String!): AuthReturn!
-    submit(caption_text: String!): Caption!
+    submit(input: CaptionInput! ): Caption!
+    vote(caption_id: ID!): Caption!
   }
 
   type Caption {
@@ -19,12 +20,13 @@ module.exports = gql`
     image: Image!
     user: User!
 	  caption: String!
-	  upvotes: int!
+	  upvotes: Int!
   }
 
   type User {
     id: ID!
-    email: String!
+    username: String!
+    password: String!
     createdAt: String!
     updatedAt: String!
   }
@@ -35,7 +37,14 @@ module.exports = gql`
   }
   type Image {
     id: ID!
-    captions: [Image]!
+    captions: [Caption]!
     url: String!
   }
+
+  input CaptionInput {
+    caption: String!, 
+    image_id: ID!
+    user_id: ID!
+  }
+
 `
