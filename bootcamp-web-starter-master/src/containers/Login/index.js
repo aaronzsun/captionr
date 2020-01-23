@@ -1,18 +1,40 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { useHistory } from 'react-router-dom'
 import FadeIn from 'react-fade-in'
 import {
   LoginBox, UsernameInput, PasswordInput, Button,
 } from './styles'
 
-const Login = () => (
-  <FadeIn>
+import { useMutation } from '@apollo/react-hooks'
+import LOGIN from './graphql'
+
+const Login = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const history = useHistory()
+  const [login] = useMutation(LOGIN, {
+    variables: {
+      username,
+      password,
+    },
+    onCompleted: ({ login: { token } }) => {
+      console.log("hi")
+      localStorage.setItem('token', token)
+      history.push('/')
+    },
+  })
+  return (
+    <FadeIn>
     <LoginBox>
-      <UsernameInput placeholder="Username" type="text" />
-      <PasswordInput placeholder="Password" type="text" />
+      <UsernameInput placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} type="text" />
+      <PasswordInput placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
       <br />
-      <Button> Log In </Button>
+      <Button onClick={login}>  Log In </Button>
     </LoginBox>
   </FadeIn>
-)
+  )
+  
+}
 
 export default Login
+
