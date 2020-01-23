@@ -17,10 +17,10 @@ casual.define('caption', ({user_id, image_id}) => ({
 
 const captions = []
 
-for (let i = 0; i < 20; ++i) {
-  const user_id = casual.random_element(userData).id
-  const image_id = casual.random_element(imageData).id
-  captions.push(casual.caption({user_id, image_id}))
-}
+// for (let i = 0; i < 20; ++i) {
+//   const user_id = casual.random_element(userData).id
+//   const image_id = casual.random_element(imageData).id
+//   captions.push(casual.caption({user_id, image_id}))
+// }
 
 module.exports = captions

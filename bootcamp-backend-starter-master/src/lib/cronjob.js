@@ -12,11 +12,14 @@ module.exports = () => {
         console.log("It's a new day! Get up and dance!")
     })
   */
-  cron.schedule('*/1 * *', async () => {
+ let counter = 1;
+  cron.schedule('1 0 * * * ', async () => {
+    counter = counter + 1 
     const res = await flickr.photos.search({
       text: 'funny',
       extras: ['url_o'],
-      per_page: 10
+      per_page: 10,
+      page: counter
     })
     
       let imagearr = res.body.photos.photo.map(({url_o}) => ({url: url_o})).filter(({url}) => !!url)
