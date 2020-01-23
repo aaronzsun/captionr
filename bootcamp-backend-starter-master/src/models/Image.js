@@ -20,5 +20,4 @@ class Image extends BaseModel {
     }
   }
 }
-
 module.exports = Image

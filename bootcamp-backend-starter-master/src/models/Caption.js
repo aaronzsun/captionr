@@ -6,7 +6,6 @@ class Caption extends BaseModel {
     static get tableName() {
         return 'captions'
     }
-
     static get relationMappings() {
         const User = require('./User')
         const Image = require('./Image')
