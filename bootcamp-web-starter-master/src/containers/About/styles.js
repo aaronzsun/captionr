@@ -49,6 +49,11 @@ export const Pic1 = styled.div`
     border-radius: 50px;
     margin-left: 30px;
     vertical-align: bottom;
+    transition: 0.4s;
+
+    &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const Pic2 = styled.div`
@@ -62,6 +67,12 @@ export const Pic2 = styled.div`
     border-radius: 50px;
     vertical-align: bottom;
     margin-right: 30px;
+
+    transition: 0.4s;
+
+    &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const LeftBox = styled.div`
@@ -74,6 +85,12 @@ export const LeftBox = styled.div`
   padding: 40px;
   padding-top: 25px;
   display: inline-block;
+
+  transition: 0.4s;
+
+    &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const RightBox = styled.div`
@@ -86,6 +103,12 @@ export const RightBox = styled.div`
   padding: 40px;
   padding-top: 25px;
   display: inline-block;
+
+  transition: 0.4s;
+
+    &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const Text = styled.text`
