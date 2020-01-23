@@ -12,6 +12,7 @@ import Create from './containers/Create'
 import Profile from './containers/Profile'
 import Register from './containers/Register'
 import About from './containers/About'
+import Content from './containers/Content'
 import './App.css'
 
 import image1 from './images/background.png'
@@ -36,6 +37,9 @@ const App = () => (
         <NavBar />
         <Switch>
           <Route path="/feed" exact component={Home} />
+          <Route path="/content/:id">
+            <Content/>
+          </Route>
           <Route path="/create" exact component={Create} />
           <Route path="/profile" exact component={Profile} />
           <Route path="/login" exact component={Login} />

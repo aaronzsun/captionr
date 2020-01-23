@@ -2,6 +2,7 @@ const { gql } = require('apollo-server-express')
 
 module.exports = gql`
   type Query {
+    selectedImage(imgg_id: ID!): Image!
     users: [User!]!
     images: [Image!]!
     victories(user_id: ID!, image_id: ID!): [Caption]!
@@ -12,7 +13,7 @@ module.exports = gql`
     login(username: String!, password: String!): AuthReturn!
     register(username: String!, password: String!): AuthReturn!
     submit(input: CaptionInput! ): Caption!
-    vote(caption_id: ID!): Int!
+    vote(caption_id: ID!): String!
   }
 
   type Caption {
