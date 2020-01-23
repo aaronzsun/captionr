@@ -5,17 +5,17 @@ const {
 } = require('../../lib/auth')
 
 
-const login = async (obj, { email, password }) => {
+const login = async (obj, { username, password }) => {
   const user = await User.query().findOne({
-    email,
+    username,
   })
   if (!user) {
-    throw new UserInputError('Invalid email or password')
+    throw new UserInputError('Invalid username or password')
   }
 
   const validPassword = await comparePassword(password, user.password)
   if (!validPassword) {
-    throw new UserInputError('Invalid email or password')
+    throw new UserInputError('Invalid username or password')
   }
 
 
@@ -28,15 +28,15 @@ const login = async (obj, { email, password }) => {
   return { user, token }
 }
 
-const register = async (obj, { input: { email, password } }) => {
-  const emailExists = await User.query().findOne({ email })
-  if (emailExists) {
-    throw new UserInputError('Email is already in use')
+const register = async (obj, { username, password } ) => {
+  const usernameExists = await User.query().findOne({ username })
+  if (usernameExists) {
+    throw new UserInputError('Username is already in use')
   }
 
   const passwordHash = await hashPassword(password)
   const user = await User.query().insertAndFetch({
-    email,
+    username,
     password: passwordHash,
   })
 

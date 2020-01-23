@@ -9,8 +9,8 @@ module.exports = gql`
   }
 
   type Mutation {
-    login(email: String!, password: String!): AuthReturn!
-    register(email: String!, password: String!): AuthReturn!
+    login(username: String!, password: String!): AuthReturn!
+    register(username: String!, password: String!): AuthReturn!
     submit(input: CaptionInput! ): Caption!
     vote(caption_id: ID!): Int!
   }

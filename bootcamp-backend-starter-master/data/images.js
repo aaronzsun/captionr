@@ -10,8 +10,8 @@ casual.define('image', () => ({
 
 const userData = []
 
-for (let i = 0; i < 20; ++i) {
-  userData.push(casual.image)
-}
+// for (let i = 0; i < 20; ++i) {
+//   userData.push(casual.image)
+// }
 
 module.exports = userData
