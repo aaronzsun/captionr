@@ -12,9 +12,7 @@ const Display = () => {
 
     return(
     <div>
-        {data.map((img) => {
-            <img src={img.url} />
-        })}
+        {data.map((img) => (<img src={img.url} />))}
     </div>
     )
 }
