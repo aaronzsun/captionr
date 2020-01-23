@@ -44,6 +44,7 @@ export const Container = styled.div`
   padding-left: 20px;
   background-color: rgba(255,255,255,0);
   margin-top: 0;
+  min-width: 1200px;
 `
 
 export const Tab = styled.div`

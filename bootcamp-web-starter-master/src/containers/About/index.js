@@ -14,12 +14,14 @@ const About = () => (
         <br />
         <br />
         <Text>
-            Captionr is free picture captioning website where you can caption photos
+            Captionr is a free picture captioning website where you can caption photos
             and share them with your friends. You can compete with other users
             to create the best caption. Happy Captioning!
         </Text>
       </LeftBox>
       <Pic1><img src="logo.png" alt="logo" height="190px" /></Pic1>
+      <br />
+      <Pic2><img src="dev.png" alt="dev" height="120px" /></Pic2>
       <RightBox>
         <Header>
             A Little Bit About Us
@@ -31,7 +33,7 @@ const About = () => (
             Winter Engineering Bootcamp.
         </Text>
       </RightBox>
-      <Pic2><img src="dev.png" alt="dev" height="120px" /></Pic2>
+      <br />
       <NavLink to="/register">
         <RegisterButton> Get Started </RegisterButton>
       </NavLink>
