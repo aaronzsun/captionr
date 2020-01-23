@@ -1,10 +1,19 @@
 import React from 'react'
 import FadeIn from 'react-fade-in'
-import { Title } from './styles'
+import {
+  Container, CreateBox, Image, Caption, Submit, CaptionTitle,
+} from './styles'
 
 const Create = () => (
   <FadeIn>
-    <Title> CREATE </Title>
+    <Container>
+      <CreateBox>
+        <Image />
+        <CaptionTitle>Enter a Caption</CaptionTitle>
+        <Caption type="text" />
+        <Submit> Submit Caption </Submit>
+      </CreateBox>
+    </Container>
   </FadeIn>
 
 )

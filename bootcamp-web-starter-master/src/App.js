@@ -14,11 +14,14 @@ import Register from './containers/Register'
 import About from './containers/About'
 import './App.css'
 
-import image1 from './images/background2.png'
-import image2 from './images/background.png'
+import image1 from './images/background.png'
+import image2 from './images/background2.png'
 import image3 from './images/background3.png'
 import image4 from './images/background4.png'
 import image5 from './images/background5.png'
+import image6 from './images/background6.png'
+import image7 from './images/background7.png'
+import image8 from './images/background8.png'
 
 
 const App = () => (
@@ -26,8 +29,8 @@ const App = () => (
     <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
         <BackgroundSlider
-          images={[image1, image2, image3, image4, image5]}
-          duration={10}
+          images={[image2, image3, image1, image4, image6, image7, image8, image5]}
+          duration={30}
           transition={2}
         />
         <NavBar />
