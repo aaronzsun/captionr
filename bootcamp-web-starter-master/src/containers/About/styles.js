@@ -41,51 +41,74 @@ export const RegisterButton = styled.button`
 `
 
 export const Pic1 = styled.div`
-    display: float-right;
+    display: inline-block;
     width: 250px;
-    margin-top: 60px;
-    margin-right: 130px;
+    margin-top: 80px;
     border: 0px solid black;
     background-color: #FFB9B3;
     border-radius: 50px;
+    margin-left: 30px;
+    vertical-align: bottom;
+    transition: 0.4s;
+
+    &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const Pic2 = styled.div`
+    display: inline-block;  
     padding-top: 40px;
-    display: float-left;
     width: 250px;
     height: 150px;
     margin-top: 60px;
-    margin-left: 200px;
     border: 0px solid black;
     background-color: #ACECD5;
     border-radius: 50px;
+    vertical-align: bottom;
+    margin-right: 30px;
+
+    transition: 0.4s;
+
+    &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const LeftBox = styled.div`
-  width: 800px;
+  width: 680px;
   height: 120px;
   background-color: white;
   border: 0px solid black;
   margin-top: 60px;
-  margin-left: 200px;
-  float: left;
   text-align: left;
   padding: 40px;
   padding-top: 25px;
+  display: inline-block;
+
+  transition: 0.4s;
+
+    &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const RightBox = styled.div`
-  width: 800px;
+  width: 680px;
   height: 120px;
   background-color: white;
   border: 0px solid black;
   margin-top: 60px;
-  float: right;
   text-align: left;
-  margin-right: 200px;
   padding: 40px;
   padding-top: 25px;
+  display: inline-block;
+
+  transition: 0.4s;
+
+    &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const Text = styled.text`
