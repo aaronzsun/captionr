@@ -5,7 +5,8 @@ import Display from './Display_Images'
 
 const Home = () => (
   <FadeIn>
-    <Title> FEED </Title>
+    <br></br>
+    <br></br>
     <Display/>
   </FadeIn>
 )

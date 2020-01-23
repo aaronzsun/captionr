@@ -7,13 +7,19 @@ const AllImages = async () => {
     return i
 }
 
+const selectedImage = async (obj, { imgg_id }) => {
+  const g = await Image.query().findById(imgg_id)
+  console.log('this is g: ', g)
+  return g
+}
+
 const imageCaptions = async (obj, { img_id }) => {
   const x = await Caption.query().where('image_id', img_id)
   return x
 }
 
-const captions = async ({ image_id }) => {
-  const c = await Caption.query().findById(image_id)
+const captions = async ({ id }) => {
+  const c = await Caption.query().where('image_id', id)
   return c
 }
 
@@ -21,14 +27,15 @@ const image = async ({ image_id }) => {
   const a = await Image.query().findById(image_id)
   return a
 }
-const user = async ({ image_id }) => {
-  const b = await User.query().findById(image_id)
+const user = async ({ user_id }) => {
+  const b = await User.query().findById(user_id)
   return b
 }
 const resolver = {
   Query: {
     images: AllImages,
     imageCaptions,
+    selectedImage,
   },
   Image: {
     captions,

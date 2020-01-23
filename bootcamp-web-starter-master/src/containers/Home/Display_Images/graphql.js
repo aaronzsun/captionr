@@ -4,6 +4,7 @@ const GET_ALL_IMAGES = gql`
 query allImages {
     images {
         url
+        id
     }
 }
 `
