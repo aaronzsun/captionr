@@ -4,7 +4,8 @@ import {
   Container, NavLink, Left, Right, SearchBar, LoginButton, RegisterButton, Logo, Tab,
 } from './styles'
 
-const Navbar = () => (
+const Navbar = () => {
+  return (
   <FadeIn>
     <Container>
       <Left>
@@ -17,24 +18,36 @@ const Navbar = () => (
         <Tab>
           <NavLink to="/create">Create</NavLink>
         </Tab>
-        <Tab>
-          <NavLink to="/profile">Profile</NavLink>
-        </Tab>
         <form>
           <SearchBar placeholder="Search Captionr" type="text" />
         </form>
       </Left>
-
-      <Right>
-        <NavLink to="/login">
-          <LoginButton> Log In </LoginButton>
-        </NavLink>
-        <NavLink to="/register">
-          <RegisterButton href="/login"> Sign Up </RegisterButton>
-        </NavLink>
-      </Right>
+      {localStorage.getItem('token') ? (
+        <Right>
+          <Tab>
+            <NavLink to="/profile">Profile</NavLink>
+          </Tab>
+         
+            <LoginButton href='/' onClick={
+              localStorage.setItem('token', '')
+           
+              }> Log Out </LoginButton>
+       
+        </Right>
+      ) : (
+        <Right>
+          <NavLink to="/login">
+            <LoginButton> Log In </LoginButton>
+          </NavLink>
+          <NavLink to="/register">
+            <RegisterButton href="/login"> Sign Up </RegisterButton>
+          </NavLink>
+        </Right>
+      )}  
+          
+        
     </Container>
   </FadeIn>
-)
+)}
 
 export default Navbar
