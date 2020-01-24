@@ -21,6 +21,8 @@ const decodeToken = token => {
     throw new AuthenticationError('Invalid token, please log in.')
   }
   try {
+    console.log(token)
+    console.log(jwt.verify(token, config.tokenSecret))
     return jwt.verify(token, config.tokenSecret)
   } catch (error) {
     throw new AuthenticationError('Invalid token, please log in.')

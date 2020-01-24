@@ -1,17 +1,16 @@
 import React from 'react'
 import FadeIn from 'react-fade-in'
 import {
-  Container, CreateBox, Image, Caption, Submit, CaptionTitle,
+  Container, CreateBox, Image, Submit, CaptionTitle,
 } from './styles'
+import DisplayCurrentImage from './render-image'
 
 const Create = () => (
   <FadeIn>
     <Container>
       <CreateBox>
-        <Image />
+      <DisplayCurrentImage />
         <CaptionTitle>Enter a Caption</CaptionTitle>
-        <Caption type="text" />
-        <Submit> Submit Caption </Submit>
       </CreateBox>
     </Container>
   </FadeIn>

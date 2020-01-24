@@ -19,6 +19,7 @@ const Login = () => {
     },
     onCompleted: ({ login: { token } }) => {
       console.log("hi")
+      console.log("token", token)
       localStorage.setItem('token', token)
       history.push('/')
     },
