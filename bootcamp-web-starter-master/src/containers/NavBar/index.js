@@ -28,10 +28,11 @@ const Navbar = () => {
             <NavLink to="/profile">Profile</NavLink>
           </Tab>
          
-            <LoginButton href='/' onClick={
+            <LoginButton href='/' onClick={ () => {
+              console.log("LOG OUT")
               localStorage.setItem('token', '')
            
-              }> Log Out </LoginButton>
+              }}> Log Out </LoginButton>
        
         </Right>
       ) : (

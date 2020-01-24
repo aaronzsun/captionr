@@ -1,8 +1,11 @@
 const Caption = require('../../models/Caption')
 
-const submit = async (obj, { input }) => {
-  const newCaption = await Caption.query().insert(input)
-    return newCaption
+const submit = async (obj, { input }, { user }) => {
+  console.log("fffffff")
+  console.log(user.id)
+  console.log("INPUT" , input)
+  const newCaption = await Caption.query().insert({...input, user_id: user.id})
+  return newCaption
 }
 
 const vote = async (obj, {caption_id}) => {

@@ -45,6 +45,5 @@ module.exports = gql`
   input CaptionInput {
     caption: String!, 
     image_id: ID!
-    user_id: ID!
   }
 `
