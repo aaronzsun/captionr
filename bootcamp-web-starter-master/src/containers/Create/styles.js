@@ -5,6 +5,8 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
 `
 
 export const CaptionTitle = styled.text`
@@ -12,11 +14,12 @@ export const CaptionTitle = styled.text`
   font-size: 25px;
   font-family: ${({ theme }) => theme.fonts.header.family};
   margin-top: 100px;
+
 `
 
 export const CreateBox = styled.div`
-  background-color: white;
-  width: 1000px;
+  width: 1200px;
   height: 600px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 `

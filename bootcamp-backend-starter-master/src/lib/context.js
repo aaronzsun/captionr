@@ -19,10 +19,10 @@ module.exports = async ({ req, res }) => {
 
   try {
     const {
-      sub,
+      id,
     } = decodeToken(req.headers.authorization)
     console.log("context headers", req.headers)
-    const user = await User.query().findById(sub)
+    const user = await User.query().findById(id)
     return ({
       req,
       res,

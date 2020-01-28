@@ -4,6 +4,8 @@ export const Image = styled.img`
     margin: 20px;
     border: 3px solid black;
     transition: 0.4s;
+    display: inline-block;
+    margin-top: 0px;
 `
 export const Submit = styled.button`
   width: 400px;
@@ -19,15 +21,25 @@ export const Submit = styled.button`
   color: white;
   cursor: pointer;
   outline: none;
+  display: block;
 `
 
-export const Caption = styled.input`
+export const Caption = styled.textarea`
   height: 200px;
   width: 400px;
   border: 1px solid black;
   text-align: left;
   margin-top: 20px;
-  vertical-align: top;
   font-family: ${({ theme }) => theme.fonts.header.family};
   font-size: 20px;
+`
+export const Form = styled.form`
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0;
+`
+
+export const Container = styled.div`
+    display: flex;
+    justify-content: center;
 `
