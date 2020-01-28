@@ -10,7 +10,6 @@ const Create = () => (
     <Container>
       <CreateBox>
       <DisplayCurrentImage />
-        <CaptionTitle>Enter a Caption</CaptionTitle>
       </CreateBox>
     </Container>
   </FadeIn>

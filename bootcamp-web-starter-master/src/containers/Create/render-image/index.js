@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {useQuery} from '@apollo/react-hooks'
 import GET_ALL_IMAGES from './graphql'
-import { Image, Caption } from './styles.js'
+import { Image, Caption, Form } from './styles.js'
 import CreateCaption from './create-caption'
 
 const DisplayCurrentImage = () => {
@@ -16,10 +16,10 @@ const DisplayCurrentImage = () => {
     return(
     <div>
         <Image key={data.images[currentImage].id} src={data.images[currentImage].url} alt="Smiley face" height="500" width="450" />
-        <form>
+        <Form>
             <Caption type="text" value={currentCaption} onChange={e => setCurrentCaption(e.target.value)}/>
             <CreateCaption data={data} currentImage={currentImage} currentCaption={currentCaption} setCurrentImage={setCurrentImage}/>
-        </form>
+        </Form>
     </div>
     )
 }
