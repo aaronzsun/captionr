@@ -43,7 +43,7 @@
     "graphql-tools": "^4.0.6",
     "helmet": "^3.21.2",
     "imgur": "^0.3.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "knex": "^0.20.8",
     "lodash.merge": "^4.6.2",
     "morgan": "^1.9.1",
